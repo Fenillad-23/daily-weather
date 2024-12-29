@@ -10,9 +10,13 @@
   height: 40vmin;
   pointer-events: none;
 }
-.current-weather{
-  height: 30vh;
+.current-weather {
+  height: 60vh;
+  display: flex;
+  gap: 100px; 
+  padding: 2%;
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
