@@ -1,24 +1,25 @@
 import React from 'react';
-import './CurrentForecast.css';
+import "../Forecast.css"
 import convertToCelsius from '../ConvertToCelcius';
 import humidityIcon from '../../icons/humidity.png';
 import visibleIcon from '../../icons/visible.png';
 import windIcon from '../../icons/wind.png';
 import uvindex from '../../icons/uvindex.png';
 import clouds from '../../icons/cloud.png';
+import tempmin from '../../icons/temperaturemin.png';
 function CurrentWeatherData({ weatherData }) {
 
     return (
         <div className='CurrentWeatherDataCard '>
             {weatherData && <>
                 <div className='column1'>
-                    {weatherDataDiv("Humidity", humidityIcon, convertToCelsius(weatherData.main.humidity))}
-                    {weatherDataDiv("Visibility", visibleIcon, `${weatherData.visibility} mi`)}
-                    {weatherDataDiv("Wind Speed", windIcon, `${weatherData.wind.speed} mph`)}
+                    {weatherDataDiv('Humidity', humidityIcon, convertToCelsius(weatherData.main.humidity))}
+                    {weatherDataDiv('Visibility', visibleIcon, `${weatherData.visibility} mi`)}
+                    {weatherDataDiv('Wind Speed', windIcon, `${weatherData.wind.speed} mph`)}
                 </div>
                 <div className='column2'>
-                    {weatherDataDiv("Precipitation", humidityIcon, convertToCelsius(weatherData.main.humidity))}
-                    {weatherDataDiv("UV index", uvindex, `${weatherData.visibility} mi`)}
+                    {weatherDataDiv('Temp min',tempmin, `${convertToCelsius(weatherData.main.temp_min)} °C`)}
+                    {weatherDataDiv('UV index', uvindex, `${weatherData.visibility} mi`)}
                     {weatherDataDiv('Clouds cover', clouds, `${weatherData.clouds.all} %`)}
                 </div></>
             }

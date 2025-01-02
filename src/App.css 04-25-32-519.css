@@ -1,27 +1,12 @@
 .App {
-  background-color: black !important; 
-  color: white;
   text-align: center;
-  height: 100%;
-  
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-.current-weather {
-  height: 60vh;
-  display: flex;
-  gap: 100px; 
-  padding: 2%;
-}
 
-.hourly-forecast{
-  width: 100%;
-  margin: 20px 30px;
-  text-align: left !important ;
-}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

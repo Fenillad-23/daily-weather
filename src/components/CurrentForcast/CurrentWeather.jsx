@@ -1,7 +1,7 @@
 import React from 'react';
 import convertToCelsius from '../ConvertToCelcius';
 
-import './CurrentForecast.css';
+import '../Forecast.css';
 function CurrentWeather({weatherData}) {
     const icon = weatherData.weather[0].icon;  
     const iconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;

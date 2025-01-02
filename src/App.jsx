@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import CurrentWeather from './components/CurrentForcast/CurrentWeather';
 import CurrentWeatherData from './components/CurrentForcast/CurrentWeatherData';
+import HourlyForcast from './components/HourlyForcast/HourlyForcast';
+import HourlyForcastData from './API/hourly-forcast.json';
 import axios from 'axios';
 
 function App() {
@@ -39,7 +41,6 @@ function App() {
     }
   }, []);
 
-
   useEffect(() => {
     if (position.latitude && position.longitude) {
       fetchCurrentWeather(position.latitude, position.longitude);
@@ -74,8 +75,11 @@ function App() {
               </div>
               <div className="hourly-forecast">
                 <h4>Hourly Forecast</h4>
+                <HourlyForcast weatherData={HourlyForcastData} />
               </div>
+              <div className="daily-forcast"></div>
             </div>
+            
           </div>
         </div>
       </div>): <alert className="alert alert-info" role="alert">fetching weather data</alert>}
